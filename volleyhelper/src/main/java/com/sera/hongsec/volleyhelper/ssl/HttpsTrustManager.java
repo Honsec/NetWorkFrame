@@ -1,4 +1,4 @@
-package com.sera.hongsec.volleyhelper;
+package com.sera.hongsec.volleyhelper.ssl;
 
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;

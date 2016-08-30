@@ -17,7 +17,7 @@ import org.json.JSONObject;
  * email : piaohongshi0506@gmail.com
  * QQ: 251520264
  */
-public abstract class  StringRequest<T> extends BaseRequest<T>  {
+public abstract class  StringRequest<T> extends BaseRequest<T> {
 
 
     @Override

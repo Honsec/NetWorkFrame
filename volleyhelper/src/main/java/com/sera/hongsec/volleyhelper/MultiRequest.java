@@ -19,9 +19,14 @@ import org.json.JSONObject;
  * email : piaohongshi0506@gmail.com
  * QQ: 251520264
  */
-public abstract class MultiRequest<T> extends BaseRequest<T>  {
+public abstract class MultiRequest<T> extends BaseRequest<T> {
 
     public abstract MultipartRequestParams getMultiParamHeaders();
+
+    @Override
+    public JSONObject getHeaders() {
+        return null;
+    }
 
     @Override
     public void request(Context context, final StringCallBackListener<T> tCallBackListener) {
@@ -60,13 +65,13 @@ public abstract class MultiRequest<T> extends BaseRequest<T>  {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
                     if(tCallBackListener!=null){
                         tCallBackListener.onResponseString((T)MultiRequest.this,new String(response.data));
                     }
                     if(tCallBackListener!=null){
                         tCallBackListener.onErrorResponse((T) MultiRequest.this);
                     }
-
                     ErrorStatusProcess(response.statusCode);
 
 
